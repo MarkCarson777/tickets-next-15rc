@@ -12,4 +12,8 @@ export default withSentryConfig(nextConfig, {
   authToken: process.env.SENTRY_AUTH_TOKEN,
 
   silent: false, // Can be used to suppress logs
+
+  hideSourceMaps: true,
+
+  disableLogger: true,
 });
