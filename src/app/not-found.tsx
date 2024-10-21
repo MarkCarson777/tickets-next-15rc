@@ -1,11 +1,25 @@
-import Link from "next/link";
+import Image from "next/image";
+
+export const metadata = {
+  title: "Page Not Found",
+};
 
 export default function NotFound() {
   return (
-    <div>
-      <h2>Not Found</h2>
-      <p>Could not find requested resource</p>
-      <Link href="/">Return Home</Link>
+    <div className="px-2 w-full">
+      <div className="mx-auto py-4 flex flex-col justify-center items-center gap-4">
+        <h2 className="text-2xl">Page Not Found</h2>
+        <Image
+          className="m-0 rounded-xl"
+          src="/images/not-found.jpg"
+          width={400}
+          height={300}
+          sizes="400px"
+          alt="Page Not Found"
+          priority
+          title="Page Not Found"
+        />
+      </div>
     </div>
   );
 }
